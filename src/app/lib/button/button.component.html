@@ -1,0 +1,8 @@
+<button [attr.type]="buttonType" 
+	class="btn btn-default text-uppercase"  
+	[class.pb360_inverse_btn]="inversedButton" 
+	(click)="eventClick($event)"
+	[disabled]="disabled">
+	<i *ngIf= 'glyphiconName' class="glyphicon {{glyphiconName}}"></i>
+	{{buttonText}}
+</button>

@@ -1,0 +1,52 @@
+.modal {
+    text-align: center;
+    padding: 0!important;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        width: 800px;
+    }
+    .modal-header {
+        background: #004a8f;
+        color: #ffffff;
+        border-radius: 0;
+        .close {
+            margin: -15px -5px 0px 0px;
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 30px;
+            // @include opacity(1);
+            outline: none;
+            &:hover {
+                // @include opacity(0.9);
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .modal-body {
+        padding: 20px;
+        font-size: 14px;
+        overflow-y: auto;
+        max-height: 500px;
+        height: auto;
+    }
+}
+
+::ng-deep {
+    .modal-footer {
+        text-align: center;
+        button {
+            width: 90px;
+        }
+    }
+}

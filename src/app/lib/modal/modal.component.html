@@ -1,0 +1,26 @@
+<div class="modal fade" [open]="!isOpen" id="myModal" [attr.data-keyboard]="true" [attr.data-backdrop]="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" [hidden]=!modalHeader>
+        <button type="button" class="close" data-dismiss="modal" (click)='close()' aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-left" id="myModalLabel">{{modalTitle}}</h4>
+      </div>
+      <div class="container-fluid padding-none">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-body">
+          <div [hidden]=!modalMessage innerHTML="{{message}}">
+          </div>
+          <div #child>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" [hidden]=!modalFooter>
+        <span [hidden]="!okButton">
+          <pb-button [buttonText]="okButtonText" (buttonClick)="submit()"></pb-button>
+        </span>
+        <span [hidden]="!cancelButton">
+          <pb-button [buttonText]="cancelButtonText" [inversedButton]="true" (buttonClick)="close()"></pb-button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
