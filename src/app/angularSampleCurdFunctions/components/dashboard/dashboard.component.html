@@ -1,0 +1,47 @@
+<div class="container">
+    <form class="form-horizontal" [formGroup]="addUserForm" (submit)="addUser()" novalidate>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="email" formControlName="email" [(ngModel)]="createData.email" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="col-sm-2 control-label">First Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="firstName" formControlName="firstName" [(ngModel)]="createData.firstName" placeholder="First Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="lastName" formControlName="lastName" [(ngModel)]="createData.lastName" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary" [disabled]="!addUserForm.valid">Add</button>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
+<div class="container">
+    <h2>Users Details</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userData ;trackBy: trackByFn">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

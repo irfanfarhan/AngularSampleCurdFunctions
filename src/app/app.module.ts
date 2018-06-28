@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { LibraryModule } from './lib/lib.module';
-import { NgNodejsMongoAppModule } from './ngNodejsMongoApp/ng-nodejs-mongo-app.module';
+import { AngularSampleCurdFunctionsModule } from './angularSampleCurdFunctions/angular-sample-curd-functions-app.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { NgNodejsMongoAppModule } from './ngNodejsMongoApp/ng-nodejs-mongo-app.m
     SharedModule,
     LibraryModule,
     BrowserAnimationsModule,
-    NgNodejsMongoAppModule
+    AngularSampleCurdFunctionsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

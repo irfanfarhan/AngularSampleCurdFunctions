@@ -40,7 +40,10 @@ export class RestService {
   deleteByUrl(url: string, headers?: HttpHeaders, removeEmpty = false) {
     return this.http.delete(url, { headers: headers || this.getHeaders() }).catch(this.handleError);
   }
-
+  
+  getByUrlWithoutOptions(url: string) {
+    return this.http.get(url).catch(this.handleError);
+  }
   private handleError(error: Response | any) {
     console.log(error.status);
     return Observable.throw(error);
