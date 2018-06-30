@@ -49,6 +49,35 @@
             }
         }
     }
+    .nav-menu-list-right {
+        li {
+            a {
+                color: #ffffff !important;
+                text-transform: capitalize;
+                line-height: 17px;
+                font-size: 14px;
+                i {
+                    &.fa-2x {
+                        font-size: 20px !important;
+                    }
+                }
+                &:hover {
+                    color: #fae042 !important; //background-color: rgba(0, 0, 0, .1) !important;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        border-color: transparent;
+        box-shadow: none;
+        &.collapse {
+            border-color: transparent;
+            box-shadow: none;
+        }
+        &.in {
+            background: linear-gradient( to right, rgba(107, 183, 86, 0.95), rgba(0, 143, 104, 0.95));
+        }
+    }
     .navbar-toggle {
         border: none;
         border-radius: 0;
